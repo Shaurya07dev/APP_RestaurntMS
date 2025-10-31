@@ -1,0 +1,35 @@
+# Build output
+/target/
+
+# Maven wrapper cache
+.mvn/
+!/.mvn/wrapper/maven-wrapper.jar
+
+# Logs
+logs/
+*.log
+*.log.*
+
+# IDE files
+.idea/
+*.iml
+.classpath
+.project
+.settings/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Java
+*.class
+hs_err_pid*
+replay_pid*
+
+# Spring profiles (local overrides)
+application-local.properties
+application-local.yml
+
+# Misc
+/bin/
+/build/
