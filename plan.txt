@@ -1,0 +1,82 @@
+ 🍽️ Project Title:
+
+Restaurant Management System with QR-Based Smart Ordering
+
+💡 Concept Overview:
+
+This project is a web-based restaurant management system designed to simplify the entire dining experience using QR-based ordering and digital payments.
+
+Customers can scan a QR code placed on their table using their mobile camera, which automatically redirects them to the restaurant’s web app order page with the table number pre-filled.
+They can then browse the digital menu, select items, and proceed to checkout — entering their email and mobile number for order confirmation and payment via Juspay HyperSwitch.
+
+If a customer directly visits the order page, then they have to manually select table number.
+
+All administrative features such as managing the menu, groceries, and tracking orders will be handled from a dedicated admin panel.
+
+⚙️ Core Flow
+👤 Customer Workflow:
+
+Customer scans QR code (specific to each table).
+
+Redirected to a mobile-friendly order page like:
+https://yourrestaurant.com/order?table=5
+
+The table number auto-fills in the order form.
+
+Customer browses menu categories and adds items to cart.
+
+Clicks Proceed to Checkout → enters email & mobile.
+
+Redirected to Juspay payment gateway for secure payment.
+
+On successful payment → order stored in the database + confirmation displayed.
+
+👨‍🍳 Admin / Staff Workflow:
+
+Admin Dashboard:
+
+Add / Edit / Delete menu items
+
+Manage grocery stock
+
+View total sales, table orders, payment reports
+
+Staff Dashboard:
+
+View live orders (by table)
+
+Update order status (Preparing / Served / Completed)
+
+Notify kitchen for new orders
+
+🧱 Tech Stack
+Component	Technology
+Frontend	React (JSX)
+Backend	Spring Boot (Java)
+Database	PostgreSQL
+Payment Gateway	Juspay HyperSwitch
+QR Handling	Unique table QR → dynamic URL
+Hosting	Vercel (Frontend), AWS/Render (Backend)
+🔗 QR Code Mapping
+
+Each table has a unique QR code encoded with its table number:
+Example:
+
+Table No.	QR Redirect URL
+Table 1	https://yourrestaurant.com/order?table=1
+Table 2	https://yourrestaurant.com/order?table=2
+Table 3	https://yourrestaurant.com/order?table=3
+
+When scanned, the frontend reads the table query parameter and pre-selects it for the order.
+
+💳 Payment Flow
+
+Customer selects items → proceeds to checkout
+
+Enters email & phone number
+
+Spring Boot backend initiates payment via Juspay API
+
+Customer completes payment → Juspay sends callback to backend
+
+Order status updates automatically → stored in PostgreSQ

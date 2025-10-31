@@ -1,0 +1,22 @@
+-- Seed initial menu items for Postgres
+INSERT INTO menu_items (name, description, price, category, active, created_at) VALUES
+ ('Oysters Rockefeller','Fresh oysters with herbs and cream',18.00,'Appetizers',true, NOW()),
+ ('Foie Gras Torchon','Seared foie gras with brioche',24.00,'Appetizers',true, NOW()),
+ ('Tuna Tartare','Fresh tuna with avocado and citrus',16.00,'Appetizers',true, NOW()),
+ ('Escargots de Bourgogne','Classic French snails with garlic butter',20.00,'Appetizers',true, NOW()),
+ ('Wagyu Ribeye','12oz premium wagyu with seasonal vegetables',89.00,'Main Courses',true, NOW()),
+ ('Lobster Thermidor','Fresh lobster in cognac cream sauce',68.00,'Main Courses',true, NOW()),
+ ('Duck Confit','Crispy duck leg with potato purée',42.00,'Main Courses',true, NOW()),
+ ('Sea Bass en Papillote','Mediterranean sea bass with herbs',38.00,'Main Courses',true, NOW()),
+ ('Rack of Lamb','Herb-crusted lamb with rosemary jus',52.00,'Main Courses',true, NOW()),
+ ('Truffle Risotto','Creamy arborio rice with black truffle',36.00,'Main Courses',true, NOW()),
+ ('Crème Brûlée','Classic vanilla custard with caramelized sugar',12.00,'Desserts',true, NOW()),
+ ('Chocolate Soufflé','Warm chocolate soufflé with vanilla ice cream',14.00,'Desserts',true, NOW()),
+ ('Tarte Tatin','Caramelized apple tart with cream',13.00,'Desserts',true, NOW()),
+ ('Tiramisu','Italian classic with mascarpone and espresso',11.00,'Desserts',true, NOW()),
+ ('Profiteroles','Choux pastry with chocolate sauce',12.00,'Desserts',true, NOW()),
+ ('Champagne','Vintage French champagne',22.00,'Beverages',true, NOW()),
+ ('Red Wine Selection','Curated selection of fine red wines',18.00,'Beverages',true, NOW()),
+ ('Artisan Cocktail','House specialty cocktails',15.00,'Beverages',true, NOW()),
+ ('Espresso','Italian espresso shot',5.00,'Beverages',true, NOW()),
+ ('Herbal Tea','Premium loose leaf tea selection',6.00,'Beverages',true, NOW());
