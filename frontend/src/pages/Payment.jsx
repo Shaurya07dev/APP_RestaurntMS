@@ -213,7 +213,7 @@ const Payment = () => {
                 <div className="flex justify-between text-lg mb-2">
                   <span className="font-semibold">Total Amount:</span>
                   <span className="font-bold text-secondary text-2xl">
-                    ${order.totalAmount?.toFixed(2) || totalPrice.toFixed(2)}
+                    ₹{order.totalAmount?.toFixed(2) || totalPrice.toFixed(2)}
                   </span>
                 </div>
 

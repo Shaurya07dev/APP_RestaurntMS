@@ -121,7 +121,7 @@ const PlaceOrder = () => {
                           {item.category}
                         </Badge>
                       </div>
-                      <span className="text-xl font-semibold text-secondary">${item.price}</span>
+                      <span className="text-xl font-semibold text-secondary">₹{item.price}</span>
                     </div>
                     <p className="text-muted-foreground text-sm mb-4">{item.description}</p>
                     <Button 
@@ -160,7 +160,7 @@ const PlaceOrder = () => {
                           <div className="flex justify-between items-start">
                             <div className="flex-1">
                               <h4 className="font-semibold">{item.name}</h4>
-                              <p className="text-sm text-muted-foreground">${item.price} each</p>
+                              <p className="text-sm text-muted-foreground">₹{item.price} each</p>
                             </div>
                             <Button
                               variant="ghost"
@@ -190,7 +190,7 @@ const PlaceOrder = () => {
                               <Plus className="w-3 h-3" />
                             </Button>
                             <span className="ml-auto font-semibold">
-                              ${(item.price * item.quantity).toFixed(2)}
+                              ₹{(item.price * item.quantity).toFixed(2)}
                             </span>
                           </div>
                         </div>
@@ -203,7 +203,7 @@ const PlaceOrder = () => {
                       <div className="flex justify-between text-lg">
                         <span className="font-semibold">Total:</span>
                         <span className="font-bold text-secondary text-2xl">
-                          ${totalPrice.toFixed(2)}
+                          ₹{totalPrice.toFixed(2)}
                         </span>
                       </div>
                     </div>

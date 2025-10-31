@@ -35,6 +35,17 @@ Wait for: `Local: http://localhost:8080/`
 
 ## Test the Application
 
+### Test Admin Dashboard:
+1. Open: `http://localhost:8080/admin/login`
+2. Login with:
+   - Username: `admin`
+   - Password: `admin123`
+3. Explore dashboard statistics
+4. Navigate to Menu Management
+5. Try adding/editing/deleting menu items
+6. Navigate to Order Management
+7. View and update order statuses
+
 ### Test QR Code Flow:
 1. Open: `http://localhost:8080/order?table=5`
 2. Add items to cart

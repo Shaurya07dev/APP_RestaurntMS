@@ -232,7 +232,7 @@ const Checkout = () => {
                           <span className="flex-1">
                             {item.name} <span className="text-muted-foreground">×{item.quantity}</span>
                           </span>
-                          <span className="font-semibold">${(item.price * item.quantity).toFixed(2)}</span>
+                          <span className="font-semibold">₹{(item.price * item.quantity).toFixed(2)}</span>
                         </div>
                       ))}
                     </div>
@@ -242,7 +242,7 @@ const Checkout = () => {
                     <div className="flex justify-between text-lg mb-2">
                       <span className="font-semibold">Total:</span>
                       <span className="font-bold text-secondary text-2xl">
-                        ${totalPrice.toFixed(2)}
+                        ₹{totalPrice.toFixed(2)}
                       </span>
                     </div>
                   </>

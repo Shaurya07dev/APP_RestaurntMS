@@ -316,10 +316,12 @@ export DB_PASSWORD=moonlight
 
 ## API Endpoints
 
-### Menu
+### Public API
+
+#### Menu
 - `GET /api/menu` - List all active menu items
 
-### Orders
+#### Orders
 - `POST /api/orders` - Create a new order
   ```json
   {
@@ -333,6 +335,26 @@ export DB_PASSWORD=moonlight
   }
   ```
 - `GET /api/orders/{id}` - Get order by ID
+
+### Admin API
+
+#### Authentication
+- `POST /api/admin/auth/login` - Admin login
+
+#### Menu Management
+- `GET /api/admin/menu` - List all menu items (including inactive)
+- `GET /api/admin/menu/{id}` - Get menu item by ID
+- `POST /api/admin/menu` - Create new menu item
+- `PUT /api/admin/menu/{id}` - Update menu item
+- `DELETE /api/admin/menu/{id}` - Delete menu item
+- `PATCH /api/admin/menu/{id}/toggle` - Toggle active status
+
+#### Order Management
+- `GET /api/admin/orders` - List all orders
+- `GET /api/admin/orders/{id}` - Get order by ID
+- `PATCH /api/admin/orders/{id}/status` - Update order status
+
+**See [ADMIN_GUIDE.md](ADMIN_GUIDE.md) for detailed admin documentation.**
 
 ---
 
@@ -369,6 +391,18 @@ export DB_PASSWORD=moonlight
 | name         | VARCHAR(255) | Item name (snapshot)           |
 | unit_price   | DECIMAL(12,2)| Price at order time            |
 | quantity     | INTEGER      | Quantity ordered               |
+
+### admins
+| Column      | Type         | Description                    |
+|-------------|--------------|--------------------------------|
+| id          | BIGINT       | Primary key (auto-increment)   |
+| username    | VARCHAR(255) | Admin username (unique)        |
+| password    | VARCHAR(255) | Admin password (hashed)        |
+| full_name   | VARCHAR(255) | Admin full name                |
+| email       | VARCHAR(255) | Admin email (unique)           |
+| role        | VARCHAR(255) | Admin role (ADMIN, STAFF)      |
+| active      | BOOLEAN      | Account active status          |
+| created_at  | TIMESTAMP    | Account creation time          |
 
 ---
 
